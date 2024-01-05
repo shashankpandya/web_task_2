@@ -1,1 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="re.css">
+  <title>Your Restaurant</title>
+  <script src="re.js"></script>
+</head>
+<body>
+  <!-- Navbar -->
+  <section id="navbar">
+  <div class="navbar">
+    <div class="logo">
+        <img src="/Img/Logo.png" alt="Logo" >
+    </div>
+    <div class="menu" id="menu">
+        <a href="#home">Home</a>
+        <a href="#menu">Menu</a>
+        <a href="#about">About Us</a>
+        <a href="#contact">Contacts</a>
+        <a href="#cart">Cart section</a>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+</div>
+</section>
+
+  <!-- Home Section -->
+  <section id="home">
+  <div class="home-section">
+    <div class="home-image">
+        <img src="\Img\Home.png" alt="Restaurant Image" >
+    </div>
+    <div class="home-content">
+        <h1>Heavan Restaurant</h1>
+        <h3>Delicious Food, Memorable Moments</h3>
+        <p class="subtitle">Discover tranquility beyond imagination, where each stay at Serenity Haven is a symphony of comfort and bliss, creating memories that linger like a gentle whisper in the soul.</p>
+        <a href="#menu" class="explore-button">Explore Our Menu</a>
+    </div>
+</div>
+
+    </div>
+    <div class="home-content">
+      <h1>Welcome to Your Restaurant</h1>
+      <p>We don't just provide accommodations; we craft experiences that linger in your heart, inviting you to escape the ordinary and embrace the extraordinary.</p>
+      <button href="#menu" class="explore-btn">Explore Our Menu</button>
+    </div>
+  </section>
+
+  <!-- Menu Section -->
+  <section id="menu" class="menu-section">
+    <div class="category">
+        <h2>Starters</h2>
+        <div class="item">
+        <div class="item-card" data-category="starters" data-name="Crispy Calamari" data-price="9.99" data-description="Delicious fried calamari served with a tangy dipping sauce">
+            <img src="/Img/1.jpg" alt="Crispy Calamari">
+            <h3>Crispy Calamari</h3>
+            <button class="add-to-cart-button">₹90</button>
+            <p class="description">Delicious fried calamari served with a tangy dipping sauce.</p>
+            <button class="add-to-cart-button" onclick="addToCart('Grilled Salmon', 22.99)">Add to Cart</button>
+        </div>
+        <div class="item-card" data-category="starters" data-name="Crispy Calamari" data-price="9.99" data-description="Delicious fried calamari served with a tangy dipping sauce">
+            <img src="/Img/3.jpg" alt="paneer Tikka">
+            <h3>Paneer Tikka</h3>
+            <button class="add-to-cart-button">$18.99</button>
+            <p class="description">Marinated cubes of paneer (Indian cottage cheese) grilled to perfection.</p>
+            <button class="add-to-cart-button" onclick="addToCart('Grilled Salmon', 22.99)">Add to Cart</button>
+        </div>
+        <div class="item-card" data-category="starters" data-name="Crispy Calamari" data-price="9.99" data-description="Delicious fried calamari served with a tangy dipping sauce">
+            <img src="/Img/4.webp" alt="American Sweet Corn" height="160px">
+            <h3>American Sweet Corn</h3>
+            <button class="add-to-cart-button">$18.99</button>
+            <p class="description">Marinated and grilled cubes of paneer served with mint chutney.</p>
+            <button class="add-to-cart-button" onclick="addToCart('Grilled Salmon', 22.99)">Add to Cart</button>
+        </div>
+        <div class="item-card" data-category="starters" data-name="Crispy Calamari" data-price="9.99" data-description="Delicious fried calamari served with a tangy dipping sauce">
+            <img src="/Img/2.jpg" alt="Pakora" >
+            <h3>Pakora</h3>
+            <button class="add-to-cart-button">$18.99</button>
+            <p class="description">Assorted vegetables coated in a seasoned chickpea flour batter and deep-fried until golden brown. Served with mint chutney.</p>
+            <button class="add-to-cart-button" onclick="addToCart('Grilled Salmon', 22.99)">Add to Cart</button>
+        </div>
+    </div>
+        <!-- Add more starter items as needed -->
+    </div>
+
+    <div class="category">
+        <h2>Main Courses</h2>
+        <div class="item">
+            <div class="item-card">
+            <img src="/Img/5.webp" alt="Vegetable Biryani" height="160px">
+            <h3>Vegetable Biryani</h3>
+            <button class="add-to-cart-button">$18.99</button>
+            <p>Fragrant basmati rice cooked with mixed vegetables, aromatic spices, and served with raita.</p>
+            
+            <button class="add-to-cart-button" onclick="addToCart('Grilled Salmon', 22.99)">Add to Cart</button>
+        </div>
+        
+        <div class="item-card">
+            <img src="/Img/6.jpg" alt="Palak Paneer" height="160px">
+            <h3>Palak Paneer</h3>
+            <button class="add-to-cart-button">$18.99</button>
+            <p>Fresh spinach and paneer cubes cooked in a rich tomato and cream-based curry.</p>
+            
+            <button class="add-to-cart-button" onclick="addToCart('Chicken Alfredo Pasta', 18.99)">Add to Cart</button>
+        </div>
+        
+        <div class="item-card">
+            <img src="/Img/7.jpg" alt="Vegetarian Lasagna" height="160px">
+            <h3>Vegetarian Lasagna</h3>
+            <button class="add-to-cart-button">$18.99</button>
+            <p>Layered pasta sheets with a combination of vegetables, marinara sauce, and cheese.</p>
+            <button class="add-to-cart-button" onclick="addToCart('Vegetarian Stir-Fry', 16.99)">Add to Cart</button>
+        </div>
+        <div class="item-card">
+            <img src="/Img/11.jpg" alt="Vegetarian Lasagna" height="160px">
+            <h3>Paneer Butter Masala</h3>
+            <button class="add-to-cart-button">$18.99</button>
+            <p>Cubes of paneer in a rich and creamy tomato-based curry.</p>
+            <button class="add-to-cart-button" onclick="addToCart('Vegetarian Stir-Fry', 16.99)">Add to Cart</button>
+        </div>
+        <div class="item-card">
+            <img src="/Img/12.jpg" alt="Vegetarian Lasagna" height="160px">
+            <h3>Vegetable Korma</h3>
+            <button class="add-to-cart-button">$18.99</button>
+            <p>Mixed vegetables in a flavorful coconut and cashew-based curry.</p>
+            <button class="add-to-cart-button" onclick="addToCart('Vegetarian Stir-Fry', 16.99)">Add to Cart</button>
+        </div>
+        <div class="item-card">
+            <img src="/Img/13.jpg" alt="Vegetarian Lasagna" height="160px">
+            <h3>Dal Makhani</h3>
+            <button class="add-to-cart-button">$18.99</button>
+            <p>Slow-cooked black lentils and kidney beans in a creamy tomato-based sauce.</p>
+            <button class="add-to-cart-button" onclick="addToCart('Vegetarian Stir-Fry', 16.99)">Add to Cart</button>
+        </div>
+        <div class="item-card">
+            <img src="/Img/14.jpg" alt="Vegetarian Lasagna" height="160px">
+            <h3>Aloo Gobi</h3>
+            <button class="add-to-cart-button">$18.99</button>
+            <p>Potatoes and cauliflower cooked with spices and herbs.</p>
+            <button class="add-to-cart-button" onclick="addToCart('Vegetarian Stir-Fry', 16.99)">Add to Cart</button>
+        </div>
+        <div class="item-card">
+            <img src="/Img/15.jpg" alt="Vegetarian Lasagna" height="160px">
+            <h3>Chana Masala</h3>
+            <button class="add-to-cart-button">$18.99</button>
+            <p>Chickpeas cooked in a spiced tomato-based gravy.</p>
+            <button class="add-to-cart-button" onclick="addToCart('Vegetarian Stir-Fry', 16.99)">Add to Cart</button>
+        </div>
+        <div class="item-card">
+            <img src="/Img/16.webp" alt="Vegetarian Lasagna" height="175px">
+            <h3>Baingan Bharta</h3>
+            <button class="add-to-cart-button">$18.99</button>
+            <p>Smoky roasted eggplant mashed and cooked with spices.</p>
+            <button class="add-to-cart-button" onclick="addToCart('Vegetarian Stir-Fry', 16.99)">Add to Cart</button>
+        </div>
+        <div class="item-card">
+            <img src="/Img/17.jpg" alt="Vegetarian Lasagna">
+            <h3>Rajma chaval</h3>
+            <button class="add-to-cart-button">$18.99</button>
+            <p>Kidney beans in a thick tomato-based gravy, served with rice.</p>
+            <button class="add-to-cart-button" onclick="addToCart('Vegetarian Stir-Fry', 16.99)">Add to Cart</button>
+        </div>
+        <div class="item-card">
+            <img src="/Img/18.jpg" alt="Vegetarian Lasagna">
+            <h3>Dhokla</h3>
+            <button class="add-to-cart-button">$18.99</button>
+            <p>Steamed and fermented savory cake made from rice and chickpea flour.</p>
+            <button class="add-to-cart-button" onclick="addToCart('Vegetarian Stir-Fry', 16.99)">Add to Cart</button>
+        </div>
+        <div class="item-card">
+            <img src="/Img/19.webp" alt="Vegetarian Lasagna" height="170px">
+            <h3>Chapati</h3>
+            <button class="add-to-cart-button">$18.99</button>
+            <p>A basic unleavened flatbread made from whole wheat flour.</p>
+            <button class="add-to-cart-button" onclick="addToCart('Vegetarian Stir-Fry', 16.99)">Add to Cart</button>
+        </div>
+        <div class="item-card">
+            <img src="/Img/20.jpg" alt="Vegetarian Lasagna" height="175px">
+            <h3>Roti</h3>
+            <button class="add-to-cart-button">$18.99</button>
+            <p>Similar to chapati, this is a generic term for Indian bread.</p>
+            <button class="add-to-cart-button" onclick="addToCart('Vegetarian Stir-Fry', 16.99)">Add to Cart</button>
+        </div>
+        <div class="item-card">
+            <img src="/Img/21.jpg" alt="Vegetarian Lasagna" height="160px">
+            <h3>Naan</h3>
+            <button class="add-to-cart-button">$18.99</button>
+            <p>A leavened, oven-baked flatbread made with all-purpose flour, often brushed with ghee.</p>
+            <button class="add-to-cart-button" onclick="addToCart('Vegetarian Stir-Fry', 16.99)">Add to Cart</button>
+        </div>
+        <div class="item-card">
+            <img src="/Img/22.jpg" alt="Vegetarian Lasagna">
+            <h3>Tandoori Roti</h3>
+            <button class="add-to-cart-button">$18.99</button>
+            <p>Unleavened flatbread cooked in a tandoor (clay oven), giving it a slightly smoky flavor.</p>
+            <button class="add-to-cart-button" onclick="addToCart('Vegetarian Stir-Fry', 16.99)">Add to Cart</button>
+        </div>
+        <div class="item-card">
+            <img src="/Img/23.webp" alt="Vegetarian Lasagna" height="145px">
+            <h3>Paratha</h3>
+            <button class="add-to-cart-button">$18.99</button>
+            <p>A layered flatbread made from whole wheat flour, often stuffed with various fillings like potato, paneer, or spinach.</p>
+            <button class="add-to-cart-button" onclick="addToCart('Vegetarian Stir-Fry', 16.99)">Add to Cart</button>
+        </div>
+        <!-- Add main course items similarly as starters -->
+    </div>
+    </div>
+<!--desert-->
+    <h1 style="text-align: center;">Dessert</h1>
+    <div class="item">
+        <div class="item-card">
+        <img src="/Img/8.jpg" alt="Chocolate Lava Cake">
+        <h3>Chocolate Lava Cake</h3>
+        <button class="add-to-cart-button">$18.99</button>
+        <p>Warm and gooey chocolate lava cake with a molten center, served with a vanilla ice cream.</p>
+        
+        <button class="add-to-cart-button" onclick="addToCart('Chocolate Lava Cake', 8.99)">Add to Cart</button>
+    </div>
+    
+    <div class="item-card">
+        <img src="/Img/9.jpg" alt="New York Cheesecake">
+        <h3>New York Cheesecake</h3>
+        <button class="add-to-cart-button">$18.99</button>
+        <p>A creamy New York-style cheesecake with a graham cracker crust, topped with fruit compote.</p>
+        
+        <button class="add-to-cart-button" onclick="addToCart('Cheesecake', 10.99)">Add to Cart</button>
+    </div>
+    
+    <div class="item-card">
+        <img src="/Img/10.jpg" alt="Tiramisu">
+        <h3>Tiramisu</h3>
+        <button class="add-to-cart-button">$18.99</button>
+        <p>An Italian classic featuring layers of coffee-soaked ladyfingers and mascarpone cream, dusted with cocoa powder.</p>
+        <button class="add-to-cart-button" onclick="addToCart('Tiramisu', 9.99)">Add to Cart</button>
+    </div>
+    <div class="item-card">
+        <img src="/Img/24.webp" alt="Gulam Jamun" height="170px">
+        <h3>Gulam Jamun</h3>
+        <button class="add-to-cart-button">$18.99</button>
+        <p>Deep-fried milk dumplings soaked in sugar syrup, often served warm.</p>
+        <button class="add-to-cart-button" onclick="addToCart('Tiramisu', 9.99)">Add to Cart</button>
+    </div>
+    <div class="item-card">
+        <img src="/Img/25.jpg" alt="Gulam Jamun">
+        <h3>Rasgulla</h3>
+        <button class="add-to-cart-button">$18.99</button>
+        <p>Spongy, round dumplings made from paneer (Indian cottage cheese) and soaked in sugar syrup.</p>
+        <button class="add-to-cart-button" onclick="addToCart('Tiramisu', 9.99)">Add to Cart</button>
+    </div>
+</div>
+</section>
+
+  <!-- About Us Section -->
+  <section id="about" class="about-section">
+    <div class="about-content">
+        <h2>About Us</h2>
+        <p>Welcome to Heaven Restaurant, where culinary excellence meets a delightful dining experience. Our journey began in 2003, and since then, we have been committed to serving exquisite dishes crafted with passion and creativity.</p>
+        <p>At Heaven Restaurant, we believe in using the finest, freshest ingredients to create memorable flavors. Our diverse menu is a fusion of traditional and contemporary dishes, appealing to every palate.</p>
+        <p>Our chefs, with their expertise and dedication, bring innovation to the kitchen. Each dish is a masterpiece, carefully curated to provide a gastronomic delight for our guests.</p>
+    </div>
+
+    <div class="chef-section">
+        <h3>Meet Our Chefs</h3>
+
+        <div class="chef">
+            <img src="/Img/chef1.jpg" alt="Chef Name">
+            <h4>Chef John Doe</h4>
+            <p>With over 15 years of culinary experience, Chef John Doe brings a wealth of expertise to our kitchen. His passion for creating unique and flavorful dishes is evident in every bite.</p>
+        </div>
+
+        <div class="chef">
+            <img src="/Img/chef2.jpg" alt="Chef Name">
+            <h4>Chef Jane Smith</h4>
+            <p>Chef Jane Smith, our pastry specialist, adds a sweet touch to our menu. Her delectable desserts are the perfect ending to a delightful dining experience.</p>
+        </div>
+    </div>
+</section>
+
+  <!-- Cart Section -->
+  <section id="cart">
+  <div class="cart-icon" onclick="toggleCart()">
+    <img src="/Img/cart-icon.png" alt="Cart Icon">
+    <span id="cart-count">0</span>
+</div>
+
+<div id="cart-display" class="cart-display">
+    <div class="cart-content">
+        <h2>Your Cart</h2>
+        <div id="cart-items" class="cart-items">
+            <!-- Cart items will be dynamically added here -->
+        </div>
+        <div class="order-summary">
+            <h3>Order Summary</h3>
+            <p>Total: $<span id="total-price">0.00</span></p>
+        </div>
+        <button onclick="checkout()">Checkout</button>
+    </div>
+</div>
+</section>
+
+
+  <!-- Footer -->
+  <section id="footer">
+<footer class="footer">
+    <div class="social-media">
+        <a href="#" target="_blank"
+          ><img src="/Images task1/facebook.1024x1024.png" alt="Facebook"
+        /></a>
+        <a href="#" target="_blank"
+          ><img src="/Images task1/telegram.1024x1024.png" alt="Telegram"
+        /></a>
+        <a href="#" target="_blank"
+          ><img src="/Images task1/instagram.1024x1024.png" alt="Instagram"
+        /></a>
+        <a href="#" target="_blank"
+          ><img src="/Images task1/linkedin.1024x1024.png" alt="linkden"
+        /></a>
+        <a href="#" target="_blank"
+          ><img src="/Images task1/twitter.1024x1024.png" alt="Twitter"
+        /></a>
+      </div>
+
+  <div class="footer-links">
+      <a href="#" target="_blank">Terms and Conditions</a>
+      <a href="#" target="_blank">Privacy Policy</a>
+      <a href="#" target="_blank">Copyright Information</a>
+  </div>
+
+  <div class="back-to-top" onclick="scrollToTop()">
+      <img src="/Img/arrowup.webp" alt="Back to Top">
+  </div>
+</footer>
+</section>
+  <!-- JavaScript for smooth scrolling, add to cart, etc. -->
+  <script src="re.js"></script>
+</body>
+</html>
 

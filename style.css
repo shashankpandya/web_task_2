@@ -16,7 +16,7 @@ body {
 }
 
 .logo img {
-  height: 50px; /* Adjust the height as needed */
+  height: 50px;
 }
 
 .menu a {
@@ -88,17 +88,17 @@ body {
   justify-content: center;
   align-items: center;
   padding: 40px;
+  margin: 10px;
 }
 
 .home-image {
-  position: relative;
-  flex: 1;
+    flex: 1;
 }
 
 .home-image img {
-  margin-top: 100px;
+  margin-top: 150px;
   width: 60%;
-  border-radius: 10%; /* Add border-radius for rounded corners if desired */
+  border-radius: 10%;
 }
 
 .home-content {
@@ -355,4 +355,3 @@ button:hover {
   height: 40px;
 }
 /**/
-

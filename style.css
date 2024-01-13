@@ -1,10 +1,37 @@
 body {
   margin: 0;
+  background-color: var(--primary-color);
   font-family: "Times New Roman", Times, serif;
 }
+
+#icon{
+width:30px;
+cursor: pointer;
+padding: 30px;
+}
+
+
+:root{
+  
+  --primary-color:#dcd2d2;
+  --secondary-color:rgb(51, 49, 49);
+
+  
+}
+.dark-theme{
+  --primary-color:rgb(36, 33, 33);
+  --secondary-color:#dcd2d2;
+  
+}
 /*navbar*/
+
+navbar menu{
+  flex: 1;
+text-align: right;
+}
+
 .navbar {
-  background-color: #333;
+  background-color:rgb(53, 49, 49);
   position: fixed;
   top: 0;
   height: 80px;
@@ -16,11 +43,11 @@ body {
 }
 
 .logo img {
-  height: 50px;
+  height: 50px; 
 }
 
 .menu a {
-  color: white;
+  color: rgb(255, 253, 253);
   text-decoration: none;
   margin: 0 15px;
   transition: color 0.3s;
@@ -39,7 +66,7 @@ body {
 .bar {
   width: 25px;
   height: 3px;
-  background-color: white;
+  background-color:rgb(243, 234, 234);
   margin: 3px 0px;
   margin-right: 25px;
 }
@@ -51,7 +78,7 @@ body {
         top: 60px;
         left: 0;
         width: 100%;
-        background-color: #333;
+        background-color:rgb(61, 57, 57);
         flex-direction: column;
         text-align: center;
         padding: 10px;
@@ -83,7 +110,11 @@ body {
 }
 
 /*home section*/
+h1{
+  color: var(--secondary-color);
+}
 .home-section {
+  
   display: flex;
   justify-content: center;
   align-items: center;
@@ -98,11 +129,12 @@ body {
 .home-image img {
   margin-top: 150px;
   width: 60%;
-  border-radius: 10%;
+  box-shadow: 1px 1px 10px var(--secondary-color);
+  border-radius: 10%; 
 }
 
 .home-content {
-  flex: 1;
+  flex: 1; 
   text-align: center;
   margin-top: 50px;
 }
@@ -113,21 +145,22 @@ body {
 }
 
 h3{
+  color: var(--secondary-color);
   font-style: oblique;
   font-family: cursive;
 }
 
 .subtitle {
   font-size: 1.2em;
-  color: #666;
+  color: var(--secondary-color);
   margin-bottom: 30px;
 }
 
 .explore-button {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #333;
-  color: white;
+  background-color: primary-color;
+  color: var(--primary-color);
   text-decoration: none;
   font-size: 1.2em;
   border-radius: 5px;
@@ -156,10 +189,12 @@ h3{
   justify-content: space-evenly;
 }
 h2,h3{
+  color: var(--secondary-color);
   text-align: center;
   margin-top: auto;
 }
 p{
+  color: var(--secondary-color);
   text-align: center;
 }
 .item-card {
@@ -168,9 +203,8 @@ p{
   width: 225px;
   height: 370px;
   margin-bottom: 15px;
-  background-color: #cfcccc84;
   border-radius: 10px;
-  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 1px 1px 10px var(--secondary-color);
   overflow: hidden;
   transition: transform 0.3s ease-in-out;
   cursor: pointer;
@@ -187,8 +221,8 @@ p{
 }
 
 .add-to-cart-button {
-  background-color: #373739;
-  color: rgb(255, 255, 255);
+  background-color:var(--secondary-color);
+  color: var(--primary-color);
   padding: 6px 6px;
   width:  100px;
   margin-left: 65px;
@@ -242,11 +276,12 @@ p{
 
 .chef h4 {
   font-size: 1.5em;
+  color:var(--secondary-color);
 }
 
 .chef p {
   text-align: center;
-  color: #666;
+  color: var(--secondary-color);
 }
 
 /*cart section*/
@@ -278,7 +313,7 @@ p{
   top: 0;
   right: 0;
   width: 300px;
-  background-color: #fff;
+  background-color:var(--primary-color) ;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   padding: 20px;
   z-index: 1000;
@@ -299,7 +334,7 @@ p{
 }
 
 button {
-  background-color: #4f4a4a;
+  background-color: var(--secondary-color);
   color: white;
   padding: 10px;
   border: none;
@@ -314,7 +349,7 @@ button:hover {
 /*footer*/
 
 .footer {
-  background-color: #333;
+  background-color: var(--secondary-color);
   color: white;
   padding: 20px;
   text-align: center;
@@ -338,7 +373,7 @@ button:hover {
 }
 
 .footer-links a {
-  color: white;
+  color: var(--primary-color);
   text-decoration: none;
   margin: 0 15px;
 }
@@ -354,3 +389,4 @@ button:hover {
   width: 40px;
   height: 40px;
 }
+/**/

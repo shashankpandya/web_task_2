@@ -1,3 +1,15 @@
+ var icon = document.getElementById("icon");
+
+   icon.onclick = function(){
+    document.body.classList.toggle("dark-theme");
+    if(document.body.classList.contains("dark-theme")){
+      icon.src="/Img/sun.png";
+    }else
+    {
+      icon.src="/Img/moon.png";
+    }
+   }
+
 //navbar
 window.toggleMenu = function () {
   var menu = document.getElementById('menu');
@@ -53,7 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var cartItem = document.createElement("div");
     cartItem.className = "cart-item";
     cartItem.innerHTML = `
-            <p>${name} - $${price.toFixed(2)}</p>
+            <p>${name} - ₹${price.toFixed(2)}</p>
             <div>
                 <button onclick="decreaseQuantity(this)">-</button>
                 <span>1</span>

@@ -1,14 +1,16 @@
- var icon = document.getElementById("icon");
+  var icon = document.getElementById("icon");
 
    icon.onclick = function(){
     document.body.classList.toggle("dark-theme");
     if(document.body.classList.contains("dark-theme")){
-      icon.src="Images/sun.png";
+      icon.src="/Img/sun.png";
     }else
     {
-      icon.src="Imgages/moon.png";
+      icon.src="/Img/moon.png";
     }
    }
+
+
 
 //navbar
 window.toggleMenu = function () {
@@ -28,16 +30,22 @@ document.addEventListener("DOMContentLoaded", function () {
 
 //menu section
 document.addEventListener("DOMContentLoaded", function () {
+  // Select all "Add to Cart" buttons
   var addToCartButtons = document.querySelectorAll(".add-to-cart-button");
 
+  // Add click event listener to each button
   addToCartButtons.forEach(function (button) {
     button.addEventListener("click", function () {
+      // Get item details from the data attributes
       var category = button.closest(".item-card").dataset.category;
       var name = button.closest(".item-card").dataset.name;
       var price = parseFloat(button.closest(".item-card").dataset.price);
+
+      // Call a function to add the item to the cart
       addToCart(category, name, price);
     });
   });
+
 
   function addToCart(category, name, price) {
     console.log("Added to cart:", category, name, price);
@@ -51,6 +59,7 @@ document.addEventListener("DOMContentLoaded", function () {
   var cartItemsContainer = document.getElementById("cart-items");
   var totalPriceElement = document.getElementById("total-price");
 
+ 
   window.toggleCart = function () {
     cartDisplay.style.display =
       cartDisplay.style.display === "none" ? "block" : "none";
@@ -74,10 +83,15 @@ document.addEventListener("DOMContentLoaded", function () {
             </div>
         `;
     cartItemsContainer.appendChild(cartItem);
+
     var totalPrice = parseFloat(totalPriceElement.innerText) + price;
     totalPriceElement.innerText = totalPrice.toFixed(2);
+
+  
     updateCartCount(cartCount + 1);
   };
+
+
   window.decreaseQuantity = function (button) {
     var quantityElement = button.parentElement.querySelector("span");
     var quantity = parseInt(quantityElement.innerText);
@@ -87,6 +101,7 @@ document.addEventListener("DOMContentLoaded", function () {
   };
 
   window.increaseQuantity = function (button) {
+    // Increase the quantity logic (dummy logic)
     var quantityElement = button.parentElement.querySelector("span");
     var quantity = parseInt(quantityElement.innerText);
     quantityElement.innerText = quantity + 1;
@@ -101,6 +116,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     var totalPrice = parseFloat(totalPriceElement.innerText) - price;
     totalPriceElement.innerText = totalPrice.toFixed(2);
+
+ 
     updateCartCount(cartCount - 1);
   };
 
@@ -110,6 +127,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 //footer
+
 window.scrollToTop = function () {
   window.scrollTo({
     top: 0,

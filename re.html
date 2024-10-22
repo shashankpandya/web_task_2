@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="re.css" />
+    <title>Heaven Restaurant</title>
+    <script src="re.js" defer></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <header>
+      <nav class="navbar">
+        <div class="logo">
+          <img src="/Images/Logo.png" alt="Logo" />
+          <span class="restaurant-name">Heaven Restaurant</span>
+        </div>
+        <ul class="menu" id="menu">
+          <li><a href="#Home">Home</a></li>
+          <li><a href="#sec">Menu</a></li>
+          <li><a href="#aboutus">About Us</a></li>
+          <li><a href="#Cart">Cart</a></li>
+          <li><a href="#Contacts">Contacts</a></li>
+        </ul>
+        <div class="nav-buttons">
+          <button id="theme-toggle" aria-label="Toggle dark mode">
+            <img src="/Images/moon.png" id="icon" alt="Dark mode" />
+          </button>
+          <div class="hamburger" onclick="toggleMenu()">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section id="Home" class="home-section">
+      <div class="home-content">
+        <h1>Heaven Restaurant</h1>
+        <h3>Delicious Food, Memorable Moments</h3>
+        <p class="subtitle">
+          Discover tranquility beyond imagination, where each visit to Heaven
+          Restaurant is a symphony of flavors and comfort. Create memories that
+          linger like a gentle whisper in your soul.
+        </p>
+        <a href="#sec" class="explore-button">Explore Our Menu</a>
+      </div>
+      <div class="home-image">
+        <img src="/Images/Home.png" alt="Restaurant Ambiance" />
+      </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="sec" class="menu-section">
+      <h2>Our Menu</h2>
+      <div class="category">
+        <h3>Starters</h3>
+        <div class="item">
+          <div class="item-card">
+            <img src="Images/1.jpg" alt="Crispy Calamari" />
+            <div class="item-info">
+              <h3>Crispy Calamari</h3>
+              <p>Delicious fried calamari served with a tangy dipping sauce.</p>
+              <button class="add-to-cart-button" onclick="addToCart('Crispy Calamari', 90)">
+                Add to Cart - ₹90
+              </button>
+            </div>
+          </div>
+          <div class="item-card">
+            <img src="Images/3.jpg" alt="Paneer Tikka" />
+            <div class="item-info">
+              <h3>Paneer Tikka</h3>
+              <p>Marinated cubes of paneer (Indian cottage cheese) grilled to perfection.</p>
+              <button class="add-to-cart-button" onclick="addToCart('Paneer Tikka', 99)">
+                Add to Cart - ₹99
+              </button>
+            </div>
+          </div>
+          <div class="item-card">
+            <img src="Images/4.webp" alt="American Sweet Corn" />
+            <div class="item-info">
+              <h3>American Sweet Corn</h3>
+              <p>Marinated and grilled cubes of paneer served with mint chutney.</p>
+              <button class="add-to-cart-button" onclick="addToCart('American Sweet Corn', 79)">
+                Add to Cart - ₹79
+              </button>
+            </div>
+          </div>
+          <div class="item-card">
+            <img src="Images/2.jpg" alt="Pakora" />
+            <div class="item-info">
+              <h3>Pakora</h3>
+              <p>Assorted vegetables coated in a seasoned chickpea flour batter and deep-fried until golden brown. Served with mint chutney.</p>
+              <button class="add-to-cart-button" onclick="addToCart('Pakora', 55)">
+                Add to Cart - ₹55
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="category">
+        <h3>Main Course</h3>
+        <div class="item">
+          <div class="item-card">
+            <img src="Images/5.webp" alt="Butter Chicken" />
+            <div class="item-info">
+              <h3>Butter Chicken</h3>
+              <p>Tender chicken pieces in a rich, creamy tomato-based sauce.</p>
+              <button class="add-to-cart-button" onclick="addToCart('Butter Chicken', 120)">
+                Add to Cart - ₹120
+              </button>
+            </div>
+          </div>
+          <div class="item-card">
+            <img src="Images/6.jpg" alt="Vegetable Biryani" />
+            <div class="item-info">
+              <h3>Vegetable Biryani</h3>
+              <p>Fragrant basmati rice cooked with mixed vegetables and aromatic spices.</p>
+              <button class="add-to-cart-button" onclick="addToCart('Vegetable Biryani', 100)">
+                Add to Cart - ₹100
+              </button>
+            </div>
+          </div>
+          <div class="item-card">
+            <img src="Images/7.jpg" alt="Vegetarian Lasagna" />
+            <div class="item-info">
+              <h3>Vegetarian Lasagna</h3>
+              <p>Layered pasta sheets with a combination of vegetables, marinara sauce, and cheese.</p>
+              <button class="add-to-cart-button" onclick="addToCart('Vegetarian Lasagna', 69)">
+                Add to Cart - ₹69
+              </button>
+            </div>
+          </div>
+          <div class="item-card">
+            <img src="Images/11.jpg" alt="Paneer Butter Masala" />
+            <div class="item-info">
+              <h3>Paneer Butter Masala</h3>
+              <p>Cubes of paneer in a rich and creamy tomato-based curry.</p>
+              <button class="add-to-cart-button" onclick="addToCart('Paneer Butter Masala', 100)">
+                Add to Cart - ₹100
+              </button>
+            </div>
+          </div>
+          <div class="item-card">
+            <img src="Images/12.jpg" alt="Vegetable Korma" />
+            <div class="item-info">
+              <h3>Vegetable Korma</h3>
+              <p>Mixed vegetables in a flavorful coconut and cashew-based curry.</p>
+              <button class="add-to-cart-button" onclick="addToCart('Vegetable Korma', 89)">
+                Add to Cart - ₹89
+              </button>
+            </div>
+          </div>
+          <div class="item-card">
+            <img src="Images/13.jpg" alt="Dal Makhani" />
+            <div class="item-info">
+              <h3>Dal Makhani</h3>
+              <p>Slow-cooked black lentils and kidney beans in a creamy tomato-based sauce.</p>
+              <button class="add-to-cart-button" onclick="addToCart('Dal Makhani', 90)">
+                Add to Cart - ₹90
+              </button>
+            </div>
+          </div>
+          <div class="item-card">
+            <img src="Images/14.jpg" alt="Aloo Gobi" />
+            <div class="item-info">
+              <h3>Aloo Gobi</h3>
+              <p>Potatoes and cauliflower cooked with spices and herbs.</p>
+              <button class="add-to-cart-button" onclick="addToCart('Aloo Gobi', 69)">
+                Add to Cart - ₹69
+              </button>
+            </div>
+          </div>
+          <div class="item-card">
+            <img src="Images/15.jpg" alt="Chana Masala" />
+            <div class="item-info">
+              <h3>Chana Masala</h3>
+              <p>Chickpeas cooked in a spiced tomato-based gravy.</p>
+              <button class="add-to-cart-button" onclick="addToCart('Chana Masala', 69)">
+                Add to Cart - ₹69
+              </button>
+            </div>
+          </div>
+          <div class="item-card">
+            <img src="Images/16.webp" alt="Baingan Bharta" />
+            <div class="item-info">
+              <h3>Baingan Bharta</h3>
+              <p>Smoky roasted eggplant mashed and cooked with spices.</p>
+              <button class="add-to-cart-button" onclick="addToCart('Baingan Bharta', 80)">
+                Add to Cart - ₹80
+              </button>
+            </div>
+          </div>
+          <div class="item-card">
+            <img src="Images/17.jpg" alt="Rajma Chaval" />
+            <div class="item-info">
+              <h3>Rajma Chaval</h3>
+              <p>Kidney beans in a thick tomato-based gravy, served with rice.</p>
+              <button class="add-to-cart-button" onclick="addToCart('Rajma Chaval', 70)">
+                Add to Cart - ₹70
+              </button>
+            </div>
+          </div>
+          <div class="item-card">
+            <img src="Images/18.jpg" alt="Dhokla" />
+            <div class="item-info">
+              <h3>Dhokla</h3>
+              <p>Steamed and fermented savory cake made from rice and chickpea flour.</p>
+              <button class="add-to-cart-button" onclick="addToCart('Dhokla', 50)">
+                Add to Cart - ₹50
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="category">
+        <h3>Breads</h3>
+        <div class="item">
+          <div class="item-card">
+            <img src="Images/19.webp" alt="Chapati" />
+            <div class="item-info">
+              <h3>Chapati</h3>
+              <p>Thin, unleavened flatbread made from whole wheat flour.</p>
+              <button class="add-to-cart-button" onclick="addToCart('Chapati', 10)">
+                Add to Cart - ₹10
+              </button>
+            </div>
+          </div>
+          <div class="item-card">
+            <img src="Images/20.jpg" alt="Naan" />
+            <div class="item-info">
+              <h3>Naan</h3>
+              <p>Soft, leavened flatbread baked in a tandoor (clay oven).</p>
+              <button class="add-to-cart-button" onclick="addToCart('Naan', 20)">
+                Add to Cart - ₹20
+              </button>
+            </div>
+          </div>
+          <div class="item-card">
+            <img src="Images/21.jpg" alt="Garlic Naan" />
+            <div class="item-info">
+              <h3>Garlic Naan</h3>
+              <p>Naan bread topped with minced garlic and butter.</p>
+              <button class="add-to-cart-button" onclick="addToCart('Garlic Naan', 25)">
+                Add to Cart - ₹25
+              </button>
+            </div>
+          </div>
+          <div class="item-card">
+            <img src="Images/22.jpg" alt="Tandoori Roti" />
+            <div class="item-info">
+              <h3>Tandoori Roti</h3>
+              <p>Unleavened flatbread cooked in a tandoor (clay oven), giving it a slightly smoky flavor.</p>
+              <button class="add-to-cart-button" onclick="addToCart('Tandoori Roti', 15)">
+                Add to Cart - ₹15
+              </button>
+            </div>
+          </div>
+          <div class="item-card">
+            <img src="Images/23.webp" alt="Paratha" />
+            <div class="item-info">
+              <h3>Paratha</h3>
+              <p>A layered flatbread made from whole wheat flour, often stuffed with various fillings like potato, paneer, or spinach.</p>
+              <button class="add-to-cart-button" onclick="addToCart('Paratha', 12)">
+                Add to Cart - ₹12
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="category">
+        <h3>Desserts</h3>
+        <div class="item">
+          <div class="item-card">
+            <img src="Images/8.jpg" alt="Chocolate Lava Cake" />
+            <div class="item-info">
+              <h3>Chocolate Lava Cake</h3>
+              <p>Warm and gooey chocolate lava cake with a molten center, served with vanilla ice cream.</p>
+              <button class="add-to-cart-button" onclick="addToCart('Chocolate Lava Cake', 45)">
+                Add to Cart - ₹45
+              </button>
+            </div>
+          </div>
+          <div class="item-card">
+            <img src="Images/9.jpg" alt="New York Cheesecake" />
+            <div class="item-info">
+              <h3>New York Cheesecake</h3>
+              <p>A creamy New York-style cheesecake with a graham cracker crust, topped with fruit compote.</p>
+              <button class="add-to-cart-button" onclick="addToCart('New York Cheesecake', 40)">
+                Add to Cart - ₹40
+              </button>
+            </div>
+          </div>
+          <div class="item-card">
+            <img src="Images/10.jpg" alt="Tiramisu" />
+            <div class="item-info">
+              <h3>Tiramisu</h3>
+              <p>An Italian classic featuring layers of coffee-soaked ladyfingers and mascarpone cream, dusted with cocoa powder.</p>
+              <button class="add-to-cart-button" onclick="addToCart('Tiramisu', 44)">
+                Add to Cart - ₹44
+              </button>
+            </div>
+          </div>
+          <div class="item-card">
+            <img src="Images/24.webp" alt="Gulab Jamun" />
+            <div class="item-info">
+              <h3>Gulab Jamun</h3>
+              <p>Deep-fried milk dumplings soaked in sugar syrup, often served warm.</p>
+              <button class="add-to-cart-button" onclick="addToCart('Gulab Jamun', 20)">
+                Add to Cart - ₹20
+              </button>
+            </div>
+          </div>
+          <div class="item-card">
+            <img src="Images/25.jpg" alt="Rasgulla" />
+            <div class="item-info">
+              <h3>Rasgulla</h3>
+              <p>Spongy, round dumplings made from paneer (Indian cottage cheese) and soaked in sugar syrup.</p>
+              <button class="add-to-cart-button" onclick="addToCart('Rasgulla', 20)">
+                Add to Cart - ₹20
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="aboutus" class="about-section">
+      <div class="about-content">
+        <h2>About Us</h2>
+        <p>
+          Welcome to Heaven Restaurant, where culinary excellence meets a
+          delightful dining experience. Our journey began in 2003, and since
+          then, we have been committed to serving exquisite dishes crafted with
+          passion and creativity.
+        </p>
+        <p>
+          At Heaven Restaurant, we believe in using the finest, freshest
+          ingredients to create memorable flavors. Our diverse menu is a fusion
+          of traditional and contemporary dishes, appealing to every palate.
+        </p>
+        <p>
+          Our chefs, with their expertise and dedication, bring innovation to
+          the kitchen. Each dish is a masterpiece, carefully curated to provide
+          a gastronomic delight for our guests.
+        </p>
+      </div>
+
+      <div class="chef-section">
+        <h3>Meet Our Chefs</h3>
+
+        <div class="chef">
+          <img src="/Images/chef1.jpg" alt="Chef Name" />
+          <h4>Chef John Doe</h4>
+          <p>
+            With over 15 years of culinary experience, Chef John Doe brings a
+            wealth of expertise to our kitchen. His passion for creating unique
+            and flavorful dishes is evident in every bite.
+          </p>
+        </div>
+
+        <div class="chef">
+          <img src="/Images/chef2.jpg" alt="Chef Name" />
+          <h4>Chef Jane Smith</h4>
+          <p>
+            Chef Jane Smith, our pastry specialist, adds a sweet touch to our
+            menu. Her delectable desserts are the perfect ending to a delightful
+            dining experience.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cart Section -->
+    <section id="Cart" class="cart-section">
+      <div class="cart-icon" onclick="toggleCart()">
+        <i class="fas fa-shopping-cart"></i>
+        <span id="cart-count">0</span>
+      </div>
+
+      <div id="cart-display" class="cart-display">
+        <div class="cart-content">
+          <h2>Your Cart <i class="fas fa-times close-cart" onclick="toggleCart()"></i></h2>
+          <div id="cart-items" class="cart-items">
+            <!-- Cart items will be dynamically added here -->
+          </div>
+          <div class="order-summary">
+            <h3>Order Summary</h3>
+            <p>Subtotal: ₹<span id="subtotal-price">0.00</span></p>
+            <p>Tax (5%): ₹<span id="tax-amount">0.00</span></p>
+            <p class="total-price">Total: ₹<span id="total-price">0.00</span></p>
+          </div>
+          <button class="checkout-btn" onclick="checkout()">Proceed to Checkout</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="Contacts" class="footer">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Contact Us</h3>
+          <p><i class="fas fa-map-marker-alt"></i> 123 Restaurant St, City, Country</p>
+          <p><i class="fas fa-phone"></i> +1 (123) 456-7890</p>
+          <p><i class="fas fa-envelope"></i> info@heavenrestaurant.com</p>
+        </div>
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#Home">Home</a></li>
+            <li><a href="#sec">Menu</a></li>
+            <li><a href="#aboutus">About Us</a></li>
+            <li><a href="#Cart">Cart</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Follow Us</h3>
+          <div class="social-media">
+            <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2023 Heaven Restaurant. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="#" target="_blank">Terms and Conditions</a>
+          <a href="#" target="_blank">Privacy Policy</a>
+        </div>
+      </div>
+      <div class="back-to-top" onclick="scrollToTop()">
+        <i class="fas fa-arrow-up"></i>
+      </div>
+    </footer>
+
+    <script src="re.js"></script>
+  </body>
+</html>

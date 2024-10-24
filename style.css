@@ -31,6 +31,7 @@ text-align: right;
 }
 
 .navbar {
+  z-index: 500;
   background-color:rgb(53, 49, 49);
   position: fixed;
   top: 0;
